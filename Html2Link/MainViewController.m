@@ -75,20 +75,12 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
         NSString *value = [pb stringForType:NSStringPboardType];
         NSLog(@"%@", value);
         
-        //from 6v 显示
-//        if ([self is6V:value]) {
-            _linkAddress.stringValue = value;
-//        }
+        _linkAddress.stringValue = value;
         
         return YES;
     }
     
     return NO;
-}
-
-#pragma mark - 6v
-- (BOOL)is6V:(NSString *)aUrl {
-    return [aUrl hasPrefix:url_6v];
 }
 
 #pragma mark - 打开本地
@@ -130,7 +122,7 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
 }
 
 - (void)toShowResults:(NSArray *)aArray {
-    ResultViewController *rvc = [[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"result"];
+    ResultViewController *rvc = [self.storyboard instantiateControllerWithIdentifier:@"result"];
     rvc.title = resultTitle;
     rvc.resultArray = aArray;
     [self presentViewControllerAsModalWindow:rvc];
@@ -151,12 +143,8 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
 //        NSString *htmlStr = [[NSString alloc] initWithData:htmlData encoding:gbEncoding];
 //        NSLog(@"htmlStr = %@", htmlStr);
         
-//        NSURLRequest *req = [NSURLRequest requestWithURL:url];
-//        [NSURLConnection sendAsynchronousRequest:req queue:nil completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-//            
-//        }];
         NSData *data = [NSData dataWithContentsOfURL:url];
-//        data = [self toUTF8:data];
+        data = [self toUTF8:data];
         xpathParser = [[TFHpple alloc] initWithHTMLData:data];
         //title
         TFHppleElement *e = [xpathParser peekAtSearchWithXPathQuery:@"//title"];
