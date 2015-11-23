@@ -76,9 +76,9 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
         NSLog(@"%@", value);
         
         //from 6v 显示
-        if ([self is6V:value]) {
+//        if ([self is6V:value]) {
             _linkAddress.stringValue = value;
-        }
+//        }
         
         return YES;
     }
@@ -183,8 +183,8 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
     NSMutableArray *result_array = [NSMutableArray array];
     ResultData *result_data = nil;
     for (TFHppleElement *m_element in m_array) {
-        NSLog(@"text = %@", [m_element text]);
-        NSLog(@"href = %@", [[m_element attributes] objectForKey:@"href"]);
+//        NSLog(@"text = %@", [m_element text]);
+//        NSLog(@"href = %@", [[m_element attributes] objectForKey:@"href"]);
         
         result_data = [ResultData new];
         result_data.title = [m_element text];
