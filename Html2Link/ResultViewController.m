@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+
     _toTitleTF.stringValue = [NSString stringWithFormat:@"共%@条", @(_resultArray.count)];
 }
 

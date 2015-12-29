@@ -136,16 +136,12 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
     if (net) {
         NSURL *url = [NSURL URLWithString:urlString];
         
-//        //转换成GBK编码
-//        NSStringEncoding gbEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-//
-//        NSData *htmlData = [NSData dataWithContentsOfURL:url];
-//        NSString *htmlStr = [[NSString alloc] initWithData:htmlData encoding:gbEncoding];
-//        NSLog(@"htmlStr = %@", htmlStr);
-        
         NSData *data = [NSData dataWithContentsOfURL:url];
-        data = [self toUTF8:data];
+        //转换成GBK编码
+//        data = [self toUTF8:data];
+        
         xpathParser = [[TFHpple alloc] initWithHTMLData:data];
+        
         //title
         TFHppleElement *e = [xpathParser peekAtSearchWithXPathQuery:@"//title"];
 //        NSLog(@"%@", [e text]);
@@ -191,7 +187,8 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
     } else {
         NSString *gbkString = (__bridge NSString *)gbkStr ;
         //根据网页源代码中编码方式进行修改，此处为从gbk转换为utf8
-        NSString *utf8_String = [gbkString stringByReplacingOccurrencesOfString:@"meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\"" withString:@"meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\""];
+//        NSString *utf8_String = [gbkString stringByReplacingOccurrencesOfString:@"meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\"" withString:@"meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\""];
+        NSString *utf8_String = [gbkString stringByReplacingOccurrencesOfString:@"charset=gb2312" withString:@"charset=utf-8"];
         return [utf8_String dataUsingEncoding:NSUTF8StringEncoding];
     }
 }
