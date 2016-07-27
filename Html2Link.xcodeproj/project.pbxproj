@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39793EEAC0BEE9D8799B68C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BBDE9D252B36DB58A823D7 /* libPods.a */; };
+		B3DB6A7375BCF5D3665C9735 /* libPods-Html2Link.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD8E2DE03AF4DB6A142201F /* libPods-Html2Link.a */; };
 		FA4DB55B1BA29FAC00FF9B63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB55A1BA29FAC00FF9B63 /* AppDelegate.m */; };
 		FA4DB55D1BA29FAC00FF9B63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB55C1BA29FAC00FF9B63 /* main.m */; };
 		FA4DB5621BA29FAC00FF9B63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB5611BA29FAC00FF9B63 /* Images.xcassets */; };
@@ -30,9 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5BE47A7AF1B826CA8834045D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		77BBDE9D252B36DB58A823D7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B75112C4D7FD095021F1DF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		607542392020EB905AD31A7F /* Pods-Html2Link.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Html2Link.release.xcconfig"; path = "Pods/Target Support Files/Pods-Html2Link/Pods-Html2Link.release.xcconfig"; sourceTree = "<group>"; };
+		861D5B3A30AF087341B3C387 /* Pods-Html2Link.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Html2Link.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Html2Link/Pods-Html2Link.debug.xcconfig"; sourceTree = "<group>"; };
+		AFD8E2DE03AF4DB6A142201F /* libPods-Html2Link.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Html2Link.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0AFBD71BAFEB0400FE9B5D /* Html2Link.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Html2Link.entitlements; sourceTree = "<group>"; };
 		FA4DB5541BA29FAC00FF9B63 /* Html2Link.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Html2Link.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4DB5581BA29FAC00FF9B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39793EEAC0BEE9D8799B68C1 /* libPods.a in Frameworks */,
+				B3DB6A7375BCF5D3665C9735 /* libPods-Html2Link.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,21 +73,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0ED30B711D32501991608E77 /* Pods */ = {
+		9D6328992775E631428D1068 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B75112C4D7FD095021F1DF0D /* Pods.debug.xcconfig */,
-				5BE47A7AF1B826CA8834045D /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5472005B58BD728AB533DBEE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				77BBDE9D252B36DB58A823D7 /* libPods.a */,
+				AFD8E2DE03AF4DB6A142201F /* libPods-Html2Link.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB569CBB10862F4DF9679F81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				861D5B3A30AF087341B3C387 /* Pods-Html2Link.debug.xcconfig */,
+				607542392020EB905AD31A7F /* Pods-Html2Link.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		FA4DB54B1BA29FAC00FF9B63 = {
@@ -96,8 +96,8 @@
 				FA4DB5561BA29FAC00FF9B63 /* Html2Link */,
 				FA4DB56D1BA29FAC00FF9B63 /* Html2LinkTests */,
 				FA4DB5551BA29FAC00FF9B63 /* Products */,
-				0ED30B711D32501991608E77 /* Pods */,
-				5472005B58BD728AB533DBEE /* Frameworks */,
+				DB569CBB10862F4DF9679F81 /* Pods */,
+				9D6328992775E631428D1068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,12 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA4DB5741BA29FAC00FF9B63 /* Build configuration list for PBXNativeTarget "Html2Link" */;
 			buildPhases = (
-				1B3B12ADA829410BAAF0F63C /* Check Pods Manifest.lock */,
+				C093C17D8AEDF7087EDA517E /* [CP] Check Pods Manifest.lock */,
 				FA4DB5501BA29FAC00FF9B63 /* Sources */,
 				FA4DB5511BA29FAC00FF9B63 /* Frameworks */,
 				FA4DB5521BA29FAC00FF9B63 /* Resources */,
-				0A41BEF7B12717396D963076 /* Copy Pods Resources */,
-				56EE8A30D410118C9973FA8D /* Embed Pods Frameworks */,
+				3F85ACDCAC5D617E6B865293 /* [CP] Embed Pods Frameworks */,
+				291F55AF907D600DFCA7AA5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,49 +260,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A41BEF7B12717396D963076 /* Copy Pods Resources */ = {
+		291F55AF907D600DFCA7AA5E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Html2Link/Pods-Html2Link-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1B3B12ADA829410BAAF0F63C /* Check Pods Manifest.lock */ = {
+		3F85ACDCAC5D617E6B865293 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Html2Link/Pods-Html2Link-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C093C17D8AEDF7087EDA517E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		56EE8A30D410118C9973FA8D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -433,7 +433,7 @@
 		};
 		FA4DB5751BA29FAC00FF9B63 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75112C4D7FD095021F1DF0D /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 861D5B3A30AF087341B3C387 /* Pods-Html2Link.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Html2Link/Html2Link.entitlements;
@@ -448,7 +448,7 @@
 		};
 		FA4DB5761BA29FAC00FF9B63 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BE47A7AF1B826CA8834045D /* Pods.release.xcconfig */;
+			baseConfigurationReference = 607542392020EB905AD31A7F /* Pods-Html2Link.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Html2Link/Html2Link.entitlements;

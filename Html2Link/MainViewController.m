@@ -138,7 +138,7 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
         
         NSData *data = [NSData dataWithContentsOfURL:url];
         //转换成GBK编码
-//        data = [self toUTF8:data];
+        data = [self toUTF8:data];
         
         xpathParser = [[TFHpple alloc] initWithHTMLData:data];
         
