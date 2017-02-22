@@ -1,0 +1,6 @@
+framework module Pods_Html2Link {
+  umbrella header "Pods-Html2Link-umbrella.h"
+
+  export *
+  module * { export * }
+}

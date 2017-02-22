@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3DB6A7375BCF5D3665C9735 /* libPods-Html2Link.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD8E2DE03AF4DB6A142201F /* libPods-Html2Link.a */; };
+		A28C1C5C4D7BE85533F34854 /* Pods_Html2Link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40181048D494F58296E66FAF /* Pods_Html2Link.framework */; };
 		FA4DB55B1BA29FAC00FF9B63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB55A1BA29FAC00FF9B63 /* AppDelegate.m */; };
 		FA4DB55D1BA29FAC00FF9B63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB55C1BA29FAC00FF9B63 /* main.m */; };
 		FA4DB5621BA29FAC00FF9B63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB5611BA29FAC00FF9B63 /* Images.xcassets */; };
@@ -30,9 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40181048D494F58296E66FAF /* Pods_Html2Link.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Html2Link.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607542392020EB905AD31A7F /* Pods-Html2Link.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Html2Link.release.xcconfig"; path = "Pods/Target Support Files/Pods-Html2Link/Pods-Html2Link.release.xcconfig"; sourceTree = "<group>"; };
 		861D5B3A30AF087341B3C387 /* Pods-Html2Link.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Html2Link.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Html2Link/Pods-Html2Link.debug.xcconfig"; sourceTree = "<group>"; };
-		AFD8E2DE03AF4DB6A142201F /* libPods-Html2Link.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Html2Link.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0AFBD71BAFEB0400FE9B5D /* Html2Link.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Html2Link.entitlements; sourceTree = "<group>"; };
 		FA4DB5541BA29FAC00FF9B63 /* Html2Link.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Html2Link.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4DB5581BA29FAC00FF9B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3DB6A7375BCF5D3665C9735 /* libPods-Html2Link.a in Frameworks */,
+				A28C1C5C4D7BE85533F34854 /* Pods_Html2Link.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 		9D6328992775E631428D1068 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFD8E2DE03AF4DB6A142201F /* libPods-Html2Link.a */,
+				40181048D494F58296E66FAF /* Pods_Html2Link.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 		FA4DB54C1BA29FAC00FF9B63 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Hinson.Von;
 				TargetAttributes = {
 					FA4DB5531BA29FAC00FF9B63 = {
@@ -302,7 +302,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -364,8 +364,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -408,8 +410,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";

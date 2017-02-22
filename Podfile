@@ -1,5 +1,11 @@
-platform :osx, "10.10"
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
-target "Html2Link" do
-    pod 'hpple', '~> 0.2.0'
+def import_pods
+    pod 'hpple'
+end
+
+target 'Html2Link'  do
+    platform :osx, '10.10'
+    import_pods
 end

@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 
-#import <TFHpple.h>
+#import "TFHpple.h"
 
 #import "ResultData.h"
 #import "ResultViewController.h"
@@ -144,7 +144,7 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
         
         //title
         TFHppleElement *e = [xpathParser peekAtSearchWithXPathQuery:@"//title"];
-//        NSLog(@"%@", [e text]);
+        NSLog(@"%@", [e text]);
         resultTitle = e.text;
         
     } else {
@@ -167,8 +167,8 @@ static NSString * const url_6v = @"http://www.6vhao.com/";
     NSMutableArray *result_array = [NSMutableArray array];
     ResultData *result_data = nil;
     for (TFHppleElement *m_element in m_array) {
-//        NSLog(@"text = %@", [m_element text]);
-//        NSLog(@"href = %@", [[m_element attributes] objectForKey:@"href"]);
+        NSLog(@"text = %@", [m_element text]);
+        NSLog(@"href = %@", [[m_element attributes] objectForKey:@"href"]);
         
         result_data = [ResultData new];
         result_data.title = [m_element text];
